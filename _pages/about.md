@@ -19,7 +19,7 @@ An unexpected drawback of pFL  approaches is the significantly higher computatio
 
 Federated Learning
 ======
-n 2015, Google introduced federated learning (FL) as a solution to address the challenges
+In 2015, Google introduced federated learning (FL) as a solution to address the challenges
 related to distributed datasets and insufficient data availability [65]. The goal was to enhance
 the prediction accuracy of Google’s keyboard next-word suggestions by learning from input
 behaviours of all smartphone users while maintaining their privacy rights [65]. In contrast to

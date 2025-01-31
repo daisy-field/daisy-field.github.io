@@ -10,12 +10,12 @@ redirect_from:
 {% include base_path %}
 
 Attack Simulation Tool
-======
+------
 
 
 
 March23
-======
+------
 The first dataset was collected in March 2023 on two road-side
 units (RSUs) Cohda MK5 boxes. The dataset was collected with tcpdump5 and contains vari-
 ous different information, e.g. map data, traffic light data, messages concerning vehicles, en-
@@ -32,7 +32,7 @@ anomaly detection and the training of the underlying intrusion detection model.
 
 
 DSFIDS24
-======
+------
 We use the real-world ITS dataset DSFIDS24
 [2] collected for training and evaluating network-based intrusion detection systems and avail-
 able on GitHub8. The dataset was live captured by Jonathan Ackerschewski [2] in July 2024,

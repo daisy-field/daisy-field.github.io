@@ -8,10 +8,10 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Your Name / Site Title"
+title                    : "DAISY Organization"
 title_separator          : "-"
-name                     : &name "Your Name"
-description              : &description "personal description"
+name                     : &name "DAISY FL"
+description              : &description "DAISY FL"
 url                      : https://zunzer.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "zunzer/zunzer.github.io"
@@ -22,13 +22,13 @@ repository               : "zunzer/zunzer.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Your Sidebar Name"
+  name             : "DAISY Federated Organization"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
+  bio              : "Fabian Hofmann, Seraphin Zunzer, Jonathan Ackerschewski, Lotta Fejzula"
+  location         : "Germany"
+  employer         : "Technische Universität Berlin"
   uri              : # URL
-  email            : "none@example.org" 
+  email            : "daisy@federated.org" 
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile

@@ -19,31 +19,74 @@ An unexpected drawback of pFL  approaches is the significantly higher computatio
 
 Federated Learning
 ======
-
+n 2015, Google introduced federated learning (FL) as a solution to address the challenges
+related to distributed datasets and insufficient data availability [65]. The goal was to enhance
+the prediction accuracy of Google’s keyboard next-word suggestions by learning from input
+behaviours of all smartphone users while maintaining their privacy rights [65]. In contrast to
+traditional machine learning, where all the data is collected on a central server (see Figure 2.2a),
+FL algorithms construct machine learning models using models learned on distributed datasets,
+located on separate nodes [65]. Typically, the process starts with training a model on the nodes
+with the locally available data. The trained models are then transmitted to a central aggregation
+server while maintaining data privacy (see Figure 2.2b). The central server generates a global
+model by combining the received node models using an aggregation method. FL could not
+only enhance the speed and efficiency of real-time data processing, but also increase security
+and privacy by keeping sensitive data closer to its point of origin, thereby reducing the risks of
+breaches compared to transmitting large volumes of data over potentially insecure networks. It
+also offers significant cost advantages and lower latency, enabling faster responses to security
+threats and improving the overall performance of IDS [16].
+Formally, in FL, we assume, that there are N nodes in a network, labelled as C1, . . . ,CN , each
+processing its own data stream D1, . . . , DN . We define the combined dataset D = D1 ∪ · · · ∪ DN ,
+which represents all the data observed on all nodes throughout the entire lifespan of the system.
+If a central server would be able to collect D, a global model MG could be trained centrally and
+then distributed back to the individual detection nodes. However, in an online learning scenario
+for learning an intrusion detection model in a heterogeneous network, this would require the
+continuous transmission of all data samples to the central server, violating privacy laws and
+exceeding the available bandwidth, resulting in inefficiency and slow overall performance.
 
 Intrusion Detection  
 ======
+An intrusion detection system (IDS) monitors a network or system for malicious behaviour
+[14, 64]. Based on the location of an IDS, researchers distinguish between two types: Host-
+based intrusion detection systems (HIDS) that monitor and analyze the internals of a device,
+and network-based intrusion detection systems (NIDS) that monitor and analyze the network
+traffic between devices [20]. HIDS operate on individual hosts or devices, observing log files,
+file modifications and system activity data. Thereby, an HIDS is also able to detect insider
+threats, unauthorized changes, and anomalies that NIDS systems might miss, as NIDS solely
+monitor and analyze network traffic transferred between multiple devices in the network. By
+investigating network packets, log files, and device activities, NIDS are able to detect a wide
+range of network attacks, including unauthorized access, malware, and DDoS attacks [6]. Fur-
+thermore, by recognizing suspicious network traffic, for example, through pattern analysis or
+advanced machine learning mechanisms, they are more suitable for detecting large-scale or co-
+ordinated attacks across the whole network. In this thesis, we will focus on NIDS, however,
+the effectiveness of the NIDS can be reduced by encrypted traffic and high-speed networks.
+Therefore, we also want to evaluate the system’s capability of training with large volumes of
+possibly encrypted network monitoring data and real-time processing in chapter 5.
+Besides their location of operation, IDS can be classified into two detection categories:
+Signature- and anomaly-based [62]. 
 
 Signature Based IDS
 ------
+In signature-based detection systems, the signature patterns of malicious behaviours are learned based on past activities and stored in a signature
+database [102]. When a new signature matches with the signature of a previous, in the database
+existing intrusion, an alarm signal is triggered [62]. Signature-based IDS usually have a high
+detection accuracy for previously known intrusions, however, these systems are not able to de-
+tect malicious zero-day attacks, are often time-consuming and require a high level of domain
+expertise to maintain the database with up-to-date signatures [41, 129].
 
 
 Anomaly Based IDS 
 ------
+In contrast, anomaly-based systems are much more reliable when it comes to unknown,
+sophisticated attacks, but might suffer from a higher false alarm rate [12, 41, 62]. An anomaly
+based IDS creates a normal model of the behaviour of a computer system or network, e.g. using
+machine learning, statistical-based or knowledge-based methods, and detects deviations from
+this normal behaviour [62]. Thereby, these highly effective, automated and intelligent anomaly-
+based IDS are able to analyze vast amounts of data in real-time, and even adapt to new patterns.
+By using incremental machine-learning techniques continuously adapting the model to new
+conditions and data patterns [128], these systems can learn from past incidents and adjust to
+new types of network traffic to ensure they remain effective in the evolving threat landscape
+[69]. Anomalies themselves can be categorized into three types: Point anomalies, contextual
+anomalies, and collective anomalies [20].
 
 
-**Markdown generator**
 
-The repository includes [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
-) that converts a CSV containing structured data about talks or presentations into individual markdown files that will be properly formatted for the Academic Pages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the markdown files, then commit and push them to the GitHub repository.
-
-How to edit your site's GitHub repository
-------
-Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
-
-Example: editing a markdown file for a talk
-![Editing a markdown file for a talk](/images/editing-talk.png)
-
-For more info
-------
-More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/), the [growing wiki](https://github.com/academicpages/academicpages.github.io/wiki), and you can always [ask a question on GitHub](https://github.com/academicpages/academicpages.github.io/discussions). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.

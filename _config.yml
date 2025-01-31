@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "DAISY Organization"
+title                    : "DAISY"
 title_separator          : "-"
 name                     : &name "DAISY FL"
 description              : &description "DAISY FL"

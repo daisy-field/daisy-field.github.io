@@ -1,20 +1,27 @@
 ---
-title: "Teaching experience 1"
+title: "Intelligent Cybersecurity Applications"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2014-spring-teaching-1
-venue: "University 1, Department"
-date: 2014-01-01
-location: "City, Country"
+venue: "Technische Universität Berlin, Distributed Artificial Intelligence Laboratory"
+date: 2024
+location: "Berlin, Germany"
 ---
 
-This is a description of a teaching experience. You can use markdown like any other post.
+After attending the module students should have acquired the following knowledge and skills:
+- Machine learning libraries and algorithms that can be used for network intrusion detection
+- Conducting and reporting results of cybersecurity experiments
+- Network-based attacks on IT-systems
 
-Heading 1
+Federated Learning:
 ======
+Topic 2: Federated Aggregation Methods
+Topic 3: Clustered Federated Learning
+Topic 4: Online Detection Models for IDS
 
-Heading 2
-======
 
-Heading 3
+Dataset Generation:
 ======
+Topic 5: Signature based IDS for labelling
+Topic 6: Datasources
+Topic 7: Automated Generation of Attacks

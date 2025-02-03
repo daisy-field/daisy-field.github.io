@@ -163,3 +163,5 @@ cython_debug/
 
 # Test Outputs
 **/test_*.csv
+
+Gemfile.lock

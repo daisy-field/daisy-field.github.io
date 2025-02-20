@@ -28,7 +28,7 @@ from our smart city test field along with the CIC-IDS2017
 dataset. The results show, that it effectively detects all of the
 abnormal events within milliseconds while outperforming the
 non-federated approach by more than 20%.'
-date: 2015-10-01
+date: 2025-10-01
 venue: 'Journal 1'
 slidesurl: 'http://academicpages.github.io/files/slides3.pdf'
 paperurl: 'http://academicpages.github.io/files/paper3.pdf'
